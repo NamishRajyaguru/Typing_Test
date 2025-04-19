@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <span class="nav_link"><li>Home</li></span>
+            <span class="nav_link" data-target="leaderboard_div"><li>Leaderboard</li></span>
+            <span class="nav_link" data-target="faqs"><li>FAQs</li></span>
+        </ul>
+    </nav>
+    
+    <div id="start_screen_div">
+        <h1>Typing Speed Test</h1>
+        <button id="start_test_btn">Start</button>
+    </div>
+
+    <div id="typing_test_div">
+        <div id="typingStats">
+            <p id="timer"><span>00:00</span></p>
+            <p id="typed_characters"><span>0</span></p>
+            <button id="restart">Restart</button>
+        </div>
+        <div id="sentenceDisplay"></div>
+    </div>
+
+    <div id="result_div">
+        <h1>Results</h1>
+        <p>Accuracy : <span id="accuracy">0%</span></p>
+        <p>WPM : <span id="wpm">0 wpm</span></p>
+        <p>Characters typed : <span id="typed_characters_result">0</span></p>
+        <p>Time Taken : <span id="timer_result">00:00</span></p>
+        <label for="user_name">Enter your name:</label>
+        <input type="text" id="user_name" placeholder="Your name here" maxlength="20" />
+        <button id="save_result">Save</button>
+        <button id="retry_test">Retry</button>
+    </div>
+
+    <div id="leaderboard_div">
+        <h1>LeaderBoard</h1>
+        <table id="leaderboard_table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>WPM</th>
+                    <th>Time Taken</th>
+                    <th>Character Typed</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard_list">
+                <!--Changes here-->
+            </tbody>
+        </table>
+        <button id="clear_leaderboard">Clear Leaderboard</button>
+    </div>
+
+    <div id="faqs">
+        <h1>FAQs</h1>
+        <p>Welcome to the Typing Speed Test! My name is Namish, and I built this project as a way to learn and practice the basics of JavaScript. I’ve been working with JavaScript for a short time, but with the help of ChatGPT and many online resources, I was able to put this project together. This project was made as a fun way to test typing speed and accuracy while improving my programming skills.<br><br><br>
+
+            The project works by allowing users to type a sentence that appears on the screen. Once the user starts typing, the application tracks their performance, showing the characters they've typed, and highlights correct and incorrect letters in real time. A timer starts when the user types their first character and stops when the sentence is completed. After completing the test, users can save their results, which include their typing speed (measured in words per minute) and accuracy. The results are then added to a leaderboard, allowing users to compare their performance with others.<br><br><br>
+            
+            The app uses JavaScript to dynamically update the content of the webpage, ensuring an interactive experience for users. By capturing keypress events, the app registers each letter typed and highlights the letters based on whether they are correct or incorrect. Additionally, the app displays useful information such as the total number of characters typed, the time taken, and the final typing speed and accuracy.<br><br><br>
+            
+            As a beginner, I’ve gained valuable experience through this project, learning how to work with DOM manipulation, event handling, local storage, and creating simple interactive applications. I hope to continue improving my coding skills with more complex projects in the future.<br><br><br>
+            
+            If you have any questions or suggestions, feel free to reach out!<br><br></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="leaderboard.js"></script>
+</body>
+</html>
